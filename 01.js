@@ -1,13 +1,8 @@
-
 let box = document.getElementsByClassName(".box")
 let moves = []
 
 let board = document.querySelector('#game')
-let boxes= document.querySelectorAll("div #box")
-moves.array.forEach(element => {
-    
-});
-
+let boxes = document.querySelectorAll("div #box")
 
 let player1 = {}
 let player2 = {}
@@ -24,16 +19,28 @@ function init() {
     player1.shaip = "x"
     player2.name = p2_name
     player2.css = "circle"
-    player2.shaip="O"
+    player2.shaip = "O"
 
     playerActive = player2
 
+    //לעבור על כל ה-clin
+    // ובכל פעם לעשות className="box"
     // clean the board
-    let box = document.querySelectorAll('div #box');
-    clin.classList.remove("ex");
+    let clin = document.querySelectorAll('div.box');
+   
     // clean the moves
     moves.pop(0, 8)
 
+
+}
+
+function chekWinner(shape, pos) {
+    // if(moves.length>4){
+    //     return false
+    // }
+    // else{
+    //     if()
+    // }
 
 }
 
@@ -47,16 +54,9 @@ function sign(box) {
 
     // סימון צורה 
     box.classList.add(playerActive.css)
+    debugger
     // בדיקת נצחון
-    function chekWinner(locishin) {
-        if(moves.length>4){
-            return false
-        }
-        else{
-            if()
-        }
-
-    }
+    chekWinner(playerActive.shaip, Number(box.id.replace("box","")))
     // שמירת צעד
     moves.push(event.target)
     // החלפת תור
@@ -70,9 +70,8 @@ board.addEventListener('click', function (event) {
 })
 
 init()
-sign()
-let renew = document.getElementById('#new')// לא בטוח שזה נכון
-renew.onclick=init()
+// sign()
+
 
 
 
