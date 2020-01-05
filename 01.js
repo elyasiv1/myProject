@@ -20,7 +20,7 @@ function init() {
     player2.name = p2_name
     player2.css = "circle"
     player2.shaip = "O"
-
+document.inner
     playerActive = player2
 
     //לעבור על כל ה-clin
